@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "factorlab"
+version = "0.1.0"
+description = "Exact finite factor elimination, fill graphs and mixed sum/max witnesses"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Midya Rahmani"}]
+dependencies = []
+[project.scripts]
+factorlab = "factorlab.cli:main"
+[tool.setuptools]
+packages = ["factorlab"]
