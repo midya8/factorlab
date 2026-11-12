@@ -1,6 +1,8 @@
 # FactorLab
 
-Exact finite factor elimination with every product, reduction and fill edge. Dependency-free Python plus an independent BigInt JavaScript inspector.
+FactorLab eliminates variables from supplied nonnegative rational factors over at most five binary variables. It records every product, sum or max reduction and fill edge. Dependency-free Python and independent BigInt JavaScript implementations check the results against complete enumeration.
+
+Choose an all-sum, all-max or mixed marginal-MAP query. The inspector separates the exact marginal-MAP answer from the upper bound produced by an invalid mixed order, and compares the table allocations for every small elimination order.
 
 [Live inspector](https://midya8.github.io/factorlab/) · [Method and sources](METHOD.md)
 
@@ -27,7 +29,7 @@ python -m http.server --directory docs 8000
 
 Python 3.10+ has no runtime dependencies. The Node tests use Node 22+ and an installed `google-chrome`, or `CHROME_BIN`. The normal inspector runs without a model/API call; browser controls are fetched from the same static site.
 
-## What stays inspectable
+## What you can inspect
 
 - Evidence slicing, scalar factors and explicit unit factors for absent variables.
 - Every joined assignment and source-factor local index/value/product.
